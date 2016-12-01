@@ -1,3 +1,11 @@
 .button {
     -fx-font-weight: bold;
 }
+
+.success_message {
+    -fx-text-fill: #009900;
+}
+
+.error_message {
+    -fx-text-fill: #CC0000;
+}
