@@ -21,6 +21,8 @@ import org.controlsfx.validation.Validator;
 
 public class FXMLController implements Initializable {
 
+    public static final String DEFAULT_FILENAME = "report.csv";
+    
     @FXML
     private Stage stage;
     
@@ -71,7 +73,7 @@ public class FXMLController implements Initializable {
     private File openSaveFileDialog() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Choose destination file");
-        fileChooser.setInitialFileName("report.csv");
+        fileChooser.setInitialFileName(DEFAULT_FILENAME);
         fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.csv"));
         return fileChooser.showSaveDialog(stage);
     }

@@ -23,7 +23,7 @@ public class CalendarParserTest {
     @Test
     public void it_returns_list_of_correctly_created_events() {
         List<Event> actual = callParser(
-                "fixtures/no_recurrence.ics",
+                "fixtures/unit/no_recurrence.ics",
                 "2016-11-01 00:00:00",
                 "2016-11-30 23:59:00"
         );
@@ -44,7 +44,7 @@ public class CalendarParserTest {
     @Test
     public void it_returns_events_only_for_given_date_range() {
         List<Event> actual = callParser(
-                "fixtures/no_recurrence.ics",
+                "fixtures/unit/no_recurrence.ics",
                 "2016-11-01 00:00:00",
                 "2016-11-07 23:59:00"
         );
@@ -56,7 +56,7 @@ public class CalendarParserTest {
     @Test
     public void when_events_are_recurring_it_returns_event_for_each_occurence_in_given_date_range() {
         List<Event> actual = callParser(
-                "fixtures/with_recurrence.ics",
+                "fixtures/unit/with_recurrence.ics",
                 "2016-11-01 00:00:00",
                 "2016-11-30 23:59:00"
         );
@@ -71,7 +71,7 @@ public class CalendarParserTest {
     @Test
     public void when_events_are_recurring_it_skips_recurence_exceptions() {
         List<Event> actual = callParser(
-                "fixtures/with_recurrence_and_exceptions.ics",
+                "fixtures/unit/with_recurrence_and_exceptions.ics",
                 "2016-11-01 00:00:00",
                 "2016-11-30 23:59:00"
         );
